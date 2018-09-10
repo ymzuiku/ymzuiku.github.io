@@ -13,7 +13,7 @@ class Tip {
     const rootPath = process.cwd();
     this.paths = {
       root: rootPath,
-      output: resolve(rootPath, 'build'),
+      output: resolve(rootPath, '../p'),
       public: resolve(rootPath, 'public'),
       package: resolve(rootPath, 'package.json'),
       entry: resolve(rootPath, 'index.web.js'),
