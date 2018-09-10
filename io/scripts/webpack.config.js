@@ -1,7 +1,6 @@
 const fs = require('fs-extra');
 const tip = require('./webpack.tip')();
 const resolve = require('path').resolve;
-const webpack = require('webpack');
 const isHaveDll = fs.existsSync(resolve(tip.paths.dll, 'dll.js'));
 
 const dllPlugin = isHaveDll ? [tip.plugins.DllReferencePlugin] : [];
@@ -46,7 +45,7 @@ module.exports = {
         tip.plugins.DefinePlugin,
         tip.plugins.FastUglifyJsPluginProd,
         tip.plugins.HotModuleReplacementPlugin,
-        tip.plugins.CleanWebpackPlugin,
+        // tip.plugins.CleanWebpackPlugin,
         tip.plugins.CopyWebpackPlugin,
         tip.plugins.HashedModuleIdsPlugin,
         ...dllPlugin,
