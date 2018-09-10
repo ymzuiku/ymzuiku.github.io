@@ -337,7 +337,9 @@ class Tip {
       }),
       HotModuleReplacementPlugin: new webpack.HotModuleReplacementPlugin(),
       FastUglifyJsPluginProd: new FastUglifyJsPlugin({
-        compress: true,
+        compress: {
+          warnings: false,
+        },
         debug: false,
         cache: false,
         sourceMap: false,
@@ -359,7 +361,7 @@ class Tip {
         cacheFolder: resolve(this.paths.root, './node_modules/.cache'),
       }),
       CleanWebpackPlugin: new CleanWebpackPlugin(['*'], {
-        root: resolve(this.paths.root, './build'),
+        root: this.paths.output,
         exclude: ['video'],
         verbose: true,
         dry: false,
