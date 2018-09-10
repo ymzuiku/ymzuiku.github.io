@@ -2,9 +2,10 @@
 #
 .DS_Store
 
-
+/build
 **/__pycache__
 **/.cache
+.cache
 **/build
 **/ignores
 .webpack_cache
@@ -13,6 +14,7 @@
 .vimsession
 *.sln
 .idea
+**/dll
 
 # Xcode
 
